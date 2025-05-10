@@ -1,0 +1,17 @@
+# QR CODE 
+
+import qrcode
+
+upi_id = input("enter your upi id  = ")
+
+fampay_url =f'upi://pay?pa={upi_id}&pn=Recepient%20Name&mc=1234'       # defining the payment url of each app
+paytm_url =f'upi://pay?pa={upi_id}&pn=Recepient%20Name&mc=1234'
+googlepay_url =f'upi://pay?pa={upi_id}&pn=Recepient%20Name&mc=1234'
+
+fampay_qr = qrcode.make(fampay_url)                                    # to make qr codes of each app 
+paytm_qr = qrcode.make(paytm_url)
+googlepay_qr = qrcode.make(googlepay_url)
+
+fampay_qr.show()
+paytm_qr.show()
+googlepay_qr.show()
